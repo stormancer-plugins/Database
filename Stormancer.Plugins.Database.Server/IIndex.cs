@@ -1,7 +1,11 @@
-﻿using System.Collections.Concurrent;
+﻿using System;
+using System.Collections.Concurrent;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
-namespace Stormancer.Server.Database
+namespace Server.Plugins.Database
 {
 
     public interface IIndex<TValue>
