@@ -236,7 +236,7 @@ namespace Server.Database
             var formatCtx = new IndexNameFormatContext { args = parameters, type = type, name = name };
 
             _eventHandlers().RunEventHandler<IESClientFactoryEventHandler>( e => e.OnCreatingIndexName(formatCtx), ex => {
-                _logger.Log(Stormancer.Diagnostics.LogLevel.Error, "Error occured in event handler", "On create index doesn't work", new { });
+                _logger.Log(Stormancer.Diagnostics.LogLevel.Error, LOG_CATEGORY, "An error occured while running an 'database.OnCreate' event handler", ex);
             });
 
             if (policyConfig.Pattern != null)
