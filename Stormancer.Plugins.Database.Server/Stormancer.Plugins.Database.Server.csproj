@@ -80,6 +80,8 @@
   <ItemGroup>
     <Compile Include="AuthenticatedHttpClientHandler.cs" />
     <Compile Include="ESClientFactory.cs" />
+    <Compile Include="ESClientFactoryEventHandler.cs" />
+    <Compile Include="Formatters.cs" />
     <Compile Include="IIndex.cs" />
     <Compile Include="IndexExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

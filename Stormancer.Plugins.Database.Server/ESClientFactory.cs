@@ -147,6 +147,8 @@ namespace Server.Database
 
     class ESClientFactory : IESClientFactory, IDisposable
     {
+        private const string LOG_CATEGORY = "ESClientFactory";
+
         private static ConcurrentDictionary<string, Task> _mappingInitialized = new ConcurrentDictionary<string, Task>();
         private IEnvironment _environment;
         private ConcurrentDictionary<string, Nest.ElasticClient> _clients = new ConcurrentDictionary<string, ElasticClient>();
